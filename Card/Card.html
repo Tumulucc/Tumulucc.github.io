@@ -8,14 +8,28 @@
   <script src="js/jquery-2.1.4.js"></script>
   <script src="js/bootstrap.js"></script>
   <style>
+    /*通常時*/
+    
+    body {
+      padding-top: 60px;
+    }
+    /*ブラウザの横幅が980px以下のとき*/
+    
+    @media (max-width: 767px) {
+      /* Remove any padding from the body */
+      body {
+        padding-top: 120px;
+      }
+    }
+    
     .grid {
       position: relative;
     }
     
     .grid-item {
       position: absolute;
-      width: 180px;
-      height: 200px;
+      width: 240px;
+      height: 240px;
       /*おまけ*/
       box-shadow: 1px 1px #9e9e9e;
       border-radius: 3px;
@@ -28,7 +42,7 @@
 
 <body>
   <div class="container">
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="nav-header">
           <a class="navbar-brand" href="#">Card+Boostrap</a>
@@ -40,23 +54,25 @@
         </ul>
       </div>
     </nav>
-    <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
-    <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
-    <div class="grid">
-      <div class="grid-item">aaa</div>
-      <div class="grid-item" style="height:300px;">aaa</div>
-      <div class="grid-item">aaa</div>
-      <div class="grid-item">aaa</div>
-      <div class="grid-item" style="height:280px;">aaa</div>
-      <div class="grid-item" style="height:240px;">aaa</div>
-      <div class="grid-item" style="height:280px;">aaa</div>
-      <div class="grid-item">aaa</div>
-      <div class="grid-item" style="height:300px;">aaa</div>
-      <div class="grid-item" style="height:240px;">aaa</div>
-      <div class="grid-item">aaa</div>
-      <div class="grid-item" style="height:280px;">aaa</div>
-      <div class="grid-item">aaa</div>
-      <div class="grid-item">aaa</div>
+    <div class="container-fluid">
+      <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
+      <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+      <div class="grid">
+        <div class="grid-item">aaa</div>
+        <div class="grid-item" style="height:300px;">aaa</div>
+        <div class="grid-item">aaa</div>
+        <div class="grid-item">aaa</div>
+        <div class="grid-item" style="height:280px;">aaa</div>
+        <div class="grid-item" style="height:240px;">aaa</div>
+        <div class="grid-item" style="height:180px;">aaa</div>
+        <div class="grid-item">aaa</div>
+        <div class="grid-item" style="height:300px;">aaa</div>
+        <div class="grid-item" style="height:240px;">aaa</div>
+        <div class="grid-item">aaa</div>
+        <div class="grid-item" style="height:280px;">aaa</div>
+        <div class="grid-item">aaa</div>
+        <div class="grid-item">aaa</div>
+      </div>
     </div>
   </div>
   <script src="http://dynamicsjs.com/lib/dynamics.js"></script>

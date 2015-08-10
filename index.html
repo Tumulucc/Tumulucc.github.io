@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Welcome!</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="js/bootstrap.min.js"></script>
@@ -12,21 +12,211 @@
     body {
       margin: 0 auto;
       width: auto;
-      max-width: 800px;
+      /*      max-width: 800px;*/
       color: rgba(0, 0, 0, .87);
+    }
+    
+    .grid {
+      position: relative;
+    }
+    
+    .grid-item {
+      position: absolute;
+      /*      width: 240px;*/
+      /*      height: 240px;*/
+      /*おまけ*/
+      box-shadow: 1px 1px #9e9e9e;
+      border-radius: 6px;
+      /*      transition: .3s ease-in-out;*/
+    }
+    
+    .grid-item img {
+      border-radius: 6px;
+      width: 240px;
+    }
+    
+    .index {
+      width: 240px;
+      height: 120px;
+      background-color: #66ccff;
+      text-align: center;
+      font-size: 156%;
+      line-height: 120px;
+    }
+    
+    figure {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      color: #fff;
+    }
+    
+    figcaption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .6);
+      -webkit-transition: .3s;
+      transition: .3s;
+      opacity: 0;
+      border-radius: 6px;
+    }
+    
+    figcaption h3,
+    figcaption p {
+      position: absolute;
+      left: -100%;
+      width: 100%;
+      -webkit-transition: .3s;
+      transition: .3s;
+      text-shadow: 1px 1px #000;
+    }
+    
+    figcaption h3 {
+      bottom: 60px;
+    }
+    
+    figcaption p {
+      bottom: 10px;
+    }
+    
+    figure:hover figcaption {
+      opacity: 1;
+    }
+    
+    figure:hover figcaption h3,
+    figure:hover figcaption p {
+      left: 20px;
+    }
+    
+    figure:hover figcaption h3 {
+      -webkit-transition-delay: .2s;
+      transition-delay: .2s;
+    }
+    
+    figure:hover figcaption p {
+      -webkit-transition-delay: .5s;
+      transition-delay: .5s;
+    }
+    
+    figcaption small {
+      color: #fff;
     }
 
   </style>
 </head>
 
 <body>
-  <h1>はじめまして</h1>
-  <h2>トゥムルック<small>（Tumulucc）</small>です。</h2>
-  <p>一眼レフカメラを片手に神出鬼没。 熱い若もの、偉人、美しい風景、美食を追い求める秋山 翔太郎という日本人です。</p>
-  <figure>
-    <img src="images/258225_101567486605375_5408346_o.png" alt="プロフィール画像" width="200">
-    <figcaption>トゥムルック</figcaption>
-  </figure>
+  <div class="">
+    <h1>はじめまして</h1>
+    <h2>トゥムルック<small>（Tumulucc）</small>です。</h2>
+    <p>一眼レフカメラを片手に神出鬼没。面白きところを訪ねる日本人です。</p>
+  </div>
+
+  <div class="grid">
+    <div class="grid-item">
+      <figure>
+        <img src="images/prof.png" alt="profile">
+        <figcaption>
+          <h3>トゥムルック<small>（Tumulucc）</small></h3>
+          <p>フランス人の女の子が付けた名。
+            <br> 意味はよくわからない。
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid-item index">
+      <a href="#">photo</a>
+    </div>
+    <div class="grid-item">
+      <img src="images/savi.jpg" alt="">
+    </div>
+    <div class="grid-item">
+      <img src="images/bentou.jpg" alt="義祭弁当">
+    </div>
+    <div class="grid-item">
+      <img src="images/yasaka.jpg" alt="">
+    </div>
+    <div class="grid-item index">
+      <a href="#">social</a>
+    </div>
+    <div class="grid-item">
+      <img src="images/noren.JPG" alt="">
+    </div>
+    <div class="grid-item">
+      <figure>
+        <img src="images/curry.jpg" alt="curry">
+        <figcaption>
+          <h3>2合</h3>
+          <p>一食のご飯の量は2合から3合。<br>
+          お米の減りが早いです。</p>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid-item">
+      <img src="images/savi.jpg" alt="">
+    </div>
+    <div class="grid-item">
+      <img src="images/noren.JPG" alt="">
+    </div>
+    <div class="grid-item index">
+      <a href="#">food</a>
+    </div>
+    <div class="grid-item">
+      <img src="images/bentou.jpg" alt="義祭弁当">
+    </div>
+    <div class="grid-item">
+      <img src="images/noren.JPG" alt="">
+    </div>
+    <div class="grid-item">
+      <img src="images/yasaka.jpg" alt="">
+    </div>
+    <div class="grid-item index">
+      <a href="#">travel</a>
+    </div>
+    <div class="grid-item">
+      <figure>
+        <img src="images/giant.jpg" alt="giant">
+        <figcaption>
+          <h3>探しています</h3>
+          <p>7月31日になくなりました。
+            <br> 見かけたら情報ください。
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="grid-item index">
+      <a href="#">bicycle</a>
+    </div>
+  </div>
+  <script src="http://dynamicsjs.com/lib/dynamics.js"></script>
+  <script src="Card/js/minigrid.min.js"></script>
+  <script>
+    (function() {
+      function animate(item, x, y, index) {
+        dynamics.animate(item, {
+          translateX: x,
+          translateY: y,
+          opacity: 1
+        }, {
+          type: dynamics.spring,
+          duration: 800,
+          frequency: 120,
+          delay: 100 + index * 30
+        });
+      }
+
+      minigrid('.grid', '.grid-item', 4, animate);
+
+      window.addEventListener('resize', function() {
+        minigrid('.grid', '.grid-item', 4, animate);
+      });
+    })();
+
+  </script>
 </body>
 
 </html>

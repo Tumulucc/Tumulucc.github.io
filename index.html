@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Welcome!</title>
   <!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/jquery-2.1.4.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="js/bootstrap.min.js"></script>
   <style>
@@ -132,10 +132,23 @@
       <a href="#">photo</a>
     </div>
     <div class="grid-item">
-      <img src="images/savi.jpg" alt="">
+      <figure>
+        <img src="images/savi.jpg" alt="engine">
+        <figcaption>
+          <h3>朽ちたエンジン</h3>
+          <p>五島の海岸で見かけました。</p>
+        </figcaption>
+      </figure>
     </div>
     <div class="grid-item">
-      <img src="images/bentou.jpg" alt="義祭弁当">
+      <figure>
+        <img src="images/bentou.jpg" alt="義祭弁当">
+        <figcaption>
+          <h3>義祭弁当</h3>
+          <p>佐賀が誇る賢人にちなんだ弁当<br>
+          会議の昼食で頂きました。</p>
+        </figcaption>
+      </figure>
     </div>
     <div class="grid-item">
       <img src="images/yasaka.jpg" alt="">
@@ -151,8 +164,9 @@
         <img src="images/curry.jpg" alt="curry">
         <figcaption>
           <h3>2合</h3>
-          <p>一食のご飯の量は2合から3合。<br>
-          お米の減りが早いです。</p>
+          <p>一食のご飯の量は2合から3合。
+            <br> お米の減りが早いです。
+          </p>
         </figcaption>
       </figure>
     </div>

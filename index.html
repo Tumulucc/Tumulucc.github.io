@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <title>Welcome!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--  <link rel="stylesheet" href="css/bootstrap.min.css">-->
-<!--  <script src="js/jquery-2.1.4.min.js"></script>-->
-<!--  <script src="js/bootstrap.min.js"></script>-->
+  <!--  <link rel="stylesheet" href="css/bootstrap.min.css">-->
+  <!--  <script src="js/jquery-2.1.4.min.js"></script>-->
+  <!--  <script src="js/bootstrap.min.js"></script>-->
   <style>
     body {
       margin: 0 auto;
@@ -263,44 +263,44 @@
     <div class="grid-item index">
       <a href="#">bicycle</a>
     </div>
+    <div class="grid-item">
+      <figure>
+        <img src="images/sl.jpg" alt="SL人吉">
+        <figcaption>
+          <h3>SL人吉</h3>
+          <p>SL人吉
+            <br> SL人吉
+          </p>
+        </figcaption>
+      </figure>
+    </div>
   </div>
-  <div class="grid-item">
-    <figure>
-      <img src="images/sl.jpg" alt="SL人吉">
-      <figcaption>
-        <h3>SL人吉</h3>
-        <p>SL人吉
-          <br> SL人吉
-        </p>
-      </figcaption>
-    </figure>
-  </div>
 
-  <script src="js/dynamics.js"></script>
-  <script src="js/minigrid.min.js"></script>
-  <script>
-    (function() {
-      function animate(item, x, y, index) {
-        dynamics.animate(item, {
-          translateX: x,
-          translateY: y,
-          opacity: 1
-        }, {
-          type: dynamics.spring,
-          duration: 800,
-          frequency: 120,
-          delay: 100 + index * 30
-        });
-      }
+    <script src="js/dynamics.js"></script>
+    <script src="js/minigrid.min.js"></script>
+    <script>
+      (function() {
+        function animate(item, x, y, index) {
+          dynamics.animate(item, {
+            translateX: x,
+            translateY: y,
+            opacity: 1
+          }, {
+            type: dynamics.spring,
+            duration: 800,
+            frequency: 120,
+            delay: 100 + index * 30
+          });
+        }
 
-      minigrid('.grid', '.grid-item', 4, animate);
-
-      window.addEventListener('resize', function() {
         minigrid('.grid', '.grid-item', 4, animate);
-      });
-    })();
 
-  </script>
+        window.addEventListener('resize', function() {
+          minigrid('.grid', '.grid-item', 4, animate);
+        });
+      })();
+
+    </script>
 
 </body>
 

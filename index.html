@@ -30,22 +30,22 @@
 
   <style>
     body {
-      margin: 0 auto;
-      width: auto;
       color: rgba(0, 0, 0, .87);
     }
     
     .grid {
       position: relative;
+      margin: 0 auto;
     }
     
     .grid-item {
       position: absolute;
-      width: 240px;
+      /*      width: 240px;*/
       /*おまけ*/
       box-shadow: 1px 1px #9e9e9e;
       border-radius: 6px;
-      /*      transition: .3s ease-in-out;*/
+      /*dynamics.animateを利用しない場合*/
+      transition: .3s ease-in-out;
     }
     
     .grid-item img {
@@ -54,6 +54,7 @@
     }
     
     .index {
+      width: 240px;
       height: 120px;
       background-color: #66ccff;
       text-align: center;
@@ -128,7 +129,7 @@
 </head>
 
 <body>
-  <div class="">
+  <div class="text-center">
     <h1>はじめまして</h1>
     <h2>トゥムルック<small>（Tumulucc）</small>です。</h2>
     <p>一眼レフカメラを片手に神出鬼没。面白きところを訪ねる日本人です。</p>
@@ -163,7 +164,7 @@
         <img src="images/bentou.jpg" alt="義祭弁当">
         <figcaption>
           <h3>義祭弁当</h3>
-          <p>佐賀が誇る賢人にちなんだ弁当
+          <p>佐賀の賢人にちなんだ弁当。
             <br> 会議の昼食で頂きました。
           </p>
         </figcaption>
@@ -173,9 +174,9 @@
       <figure>
         <img src="images/wakamatsu.jpg" alt="若松">
         <figcaption>
-          <h3>若松</h3>
-          <p>若松
-            <br> 若松
+          <h3>若松の洋館</h3>
+          <p>赤レンガと青空のコントラスト。
+            <br>
           </p>
         </figcaption>
       </figure>
@@ -189,8 +190,8 @@
         <figcaption>
           <h3><small>佐賀インターナショナル</small>
           <br>バルーンフェスタ</h3>
-          <p>朝のフライトがおすすめ
-          </p>
+          <p>写真を撮るなら
+            <br>朝のフライトがおすすめ。</p>
         </figcaption>
       </figure>
     </div>
@@ -205,13 +206,16 @@
         </figcaption>
       </figure>
     </div>
+    <div class="grid-item index">
+      <a href="#">local</a>
+    </div>
     <div class="grid-item">
       <figure>
         <img src="images/komainu.JPG" alt="肥前狛犬">
         <figcaption>
           <h3>肥前狛犬</h3>
-          <p>テキスト
-            <br> テキスト
+          <p>ちょっとしたものにも
+            <br> フォーカスをあてます。
           </p>
         </figcaption>
       </figure>
@@ -221,8 +225,8 @@
         <img src="images/Taisou.png" alt="ラジオ体操">
         <figcaption>
           <h3>ラジオ体操</h3>
-          <p>テキスト
-            <br> テキスト
+          <p>夏祭りでラジオ体操をする様子。
+            <br>地域活動をリポートします。
           </p>
         </figcaption>
       </figure>
@@ -235,8 +239,8 @@
         <img src="images/bizen.JPG" alt="備前国分寺">
         <figcaption>
           <h3>備前国分寺</h3>
-          <p>テキスト
-            <br> テキスト
+          <p>のどかな丘陵地帯に佇む塔。
+            <br>
           </p>
         </figcaption>
       </figure>
@@ -246,8 +250,8 @@
         <img src="images/noren.JPG" alt="">
         <figcaption>
           <h3>秋月</h3>
-          <p>テキスト
-            <br> テキスト
+          <p>古い町並みを巡り
+            <br> 新緑の頃に訪れました。
           </p>
         </figcaption>
       </figure>
@@ -257,8 +261,8 @@
         <img src="images/yasaka.jpg" alt="yasaka">
         <figcaption>
           <h3>八坂の塔</h3>
-          <p>テキスト
-            <br> テキスト
+          <p>日本の伝統に浸りに
+            <br> 年越しは京都・奈良で過ごす。
           </p>
         </figcaption>
       </figure>
@@ -285,8 +289,8 @@
         <img src="images/sl.jpg" alt="SL人吉">
         <figcaption>
           <h3>SL人吉</h3>
-          <p>SL人吉
-            <br> SL人吉
+          <p>青春18きっぷで乗れるSL。
+            <br> ゆっつら～と鉄道旅行へ。
           </p>
         </figcaption>
       </figure>
@@ -295,9 +299,9 @@
       <figure>
         <img src="images/tafuse.jpg" alt="多布施川沿いの桜並木">
         <figcaption>
-          <h3>多布施川沿いの桜並木</h3>
-          <p>S多布施川沿いの桜並木
-            <br> 多布施川沿いの桜並木
+          <h3>多布施川の桜並木</h3>
+          <p>お花見サイクリングには
+            <br> ぴったりのコース。
           </p>
         </figcaption>
       </figure>
@@ -306,6 +310,15 @@
 
   <script src="js/dynamics.js"></script>
   <script src="js/minigrid.min.js"></script>
+  <script>
+    minigrid('.grid', '.grid-item');
+    
+    window.addEventListener('resize', function() {
+      minigrid('.grid', '.grid-item');
+    });
+
+  </script>
+  <!--
   <script>
     (function() {
       function animate(item, x, y, index) {
@@ -329,6 +342,7 @@
     })();
 
   </script>
+-->
 
 </body>
 

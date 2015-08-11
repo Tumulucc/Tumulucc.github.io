@@ -1,0 +1,87 @@
+@charset utf-8;
+body {
+  color: rgba(0, 0, 0, .87);
+  width: cals(100% - 10px);
+}
+.grid {
+  position: relative;
+  margin: 0 auto;
+}
+.grid-item {
+  position: absolute;
+  width: 240px;
+  /*おまけ*/
+  box-shadow: 1px 1px #9e9e9e;
+  border-radius: 6px;
+  /*dynamics.animateを利用しない場合*/
+  transition: .3s ease-in-out;
+}
+.grid-item img {
+  border-radius: 6px;
+  width: 240px;
+}
+.index {
+  height: 120px;
+  background-color: #66ccff;
+  text-align: center;
+  font-size: 156%;
+  line-height: 120px;
+}
+.index a {
+  display: inline-block;
+  width: 100%;
+  line-height: 120px
+}
+figure {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  color: #fff;
+}
+figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0;
+  border-radius: 6px;
+}
+figcaption h3,
+figcaption p {
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+  text-shadow: 1px 1px #000;
+}
+figcaption h3 {
+  bottom: 60px;
+}
+figcaption p {
+  bottom: 10px;
+}
+figure:hover figcaption {
+  opacity: 1;
+}
+figure:hover figcaption h3,
+figure:hover figcaption p {
+  left: 20px;
+}
+figure:hover figcaption h3 {
+  -webkit-transition-delay: .2s;
+  transition-delay: .2s;
+}
+figure:hover figcaption p {
+  -webkit-transition-delay: .5s;
+  transition-delay: .5s;
+}
+figcaption small {
+  color: #fff;
+}

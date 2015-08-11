@@ -31,6 +31,7 @@
   <style>
     body {
       color: rgba(0, 0, 0, .87);
+      width: cals(100% - 10px);
     }
     
     .grid {
@@ -40,7 +41,7 @@
     
     .grid-item {
       position: absolute;
-      /*      width: 240px;*/
+      width: 240px;
       /*おまけ*/
       box-shadow: 1px 1px #9e9e9e;
       border-radius: 6px;
@@ -54,12 +55,17 @@
     }
     
     .index {
-      width: 240px;
       height: 120px;
       background-color: #66ccff;
       text-align: center;
       font-size: 156%;
       line-height: 120px;
+    }
+    
+    .index a{
+      display: inline-block;
+      width: 100%;
+      line-height: 120px
     }
     
     figure {
@@ -148,7 +154,7 @@
       </figure>
     </div>
     <div class="grid-item index">
-      <a href="#">photo</a>
+      <a href="#" class="">photo</a>
     </div>
     <div class="grid-item">
       <figure>

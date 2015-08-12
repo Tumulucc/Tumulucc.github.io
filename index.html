@@ -34,7 +34,22 @@
   <header class="text-center">
     <h1>はじめまして</h1>
     <h2>トゥムルック<small>（Tumulucc）</small>です。</h2>
-    <p>一眼レフカメラを片手に神出鬼没。面白きところを訪ねる日本人です。</p>
+    <p>カメラ片手に神出鬼没。<br>
+      面白きところを訪ねる日本人です。</p>
+
+    <nav id="menu">
+      <input type="checkbox" id="toggle-nav">
+      <label id="toggle-nav-label" for="toggle-nav"><span class="glyphicon glyphicon-menu-hamburger"></span> menu</label>
+      <div class="overlay">
+        <ul>
+          <li><a href="index.html">Top</a></li>
+          <li><a href="photo.html">photo</a></li>
+          <li><a href="#">food</a></li>
+          <li><a href="#">local</a></li>
+          <li><a href="#">social</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <div class="grid">
@@ -50,7 +65,7 @@
       </figure>
     </div>
     <div class="grid-item index">
-      <a href="#" class="">photo</a>
+      <a href="photo.html" class="">photo</a>
     </div>
     <div class="grid-item">
       <figure>
@@ -210,12 +225,12 @@
     </div>
   </div>
 
-<!--  <script src="js/dynamics.js"></script>-->
+  <!--  <script src="js/dynamics.js"></script>-->
   <script src="js/minigrid.min.js"></script>
   <!-- dynamics未利用 -->
   <script>
     minigrid('.grid', '.grid-item');
-    
+
     window.addEventListener('resize', function() {
       minigrid('.grid', '.grid-item');
     });

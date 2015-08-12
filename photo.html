@@ -34,28 +34,38 @@
   <header class="text-center">
     <h1>はじめまして</h1>
     <h2><small>（Photographer Tumulucc）</small></h2>
-    <p>一眼レフカメラを片手に神出鬼没。面白きところを訪ねる日本人です。</p>
-    <button type="button" class="btn btn-primary affix" data-toggle="modal" data-target="#menu-modal">=</button>
-    <div class="modal fade" id="menu-modal">
-      <div class="modal-dialog" role="document">
-        <div class="text-center">
-          <nav>
-            <ul class="">
-              <li><a href="#" style="font-size:156%;">aaaa</a></li>
-              <li><a href="#">aaaa</a></li>
-            </ul>
-          </nav>
-          <a href="#" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
-        </div>
+    <p>カメラ片手に神出鬼没。<br>
+      面白きところを訪ねる日本人です。</p>
+
+    <nav id="menu">
+      <input type="checkbox" id="toggle-nav">
+      <label id="toggle-nav-label" for="toggle-nav"><span class="glyphicon glyphicon-menu-hamburger"></span> menu</label>
+      <div class="overlay">
+        <ul>
+          <li><a href="index.html">Top</a></li>
+          <li><a href="photo.html">photo</a></li>
+          <li><a href="#">food</a></li>
+          <li><a href="#">local</a></li>
+          <li><a href="#">social</a></li>
+        </ul>
       </div>
-    </div>
+    </nav>
   </header>
 
   <div class="container-fluid">
-    <div class="jumbotron"></div>
+    <div class="jumbotron">
+      <img src="images/photo-1.JPG" width="400">
+    </div>
     <section>
-      <h3>aaa</h3>
-      <p>aaaa</p>
+      <h3>使用カメラ</h3>
+      <p>CANON EOS 70D</p>
+      <h3>使用レンズ</h3>
+      <p>18-135</p>
+      <h3>撮影対象</h3>
+      <ul>
+        <li>イベント集合写真</li>
+        <li>吹奏楽コンサート</li>
+      </ul>
     </section>
   </div>
 

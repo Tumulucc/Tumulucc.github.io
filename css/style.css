@@ -221,7 +221,7 @@ figcaption small {
   padding-bottom: 20px;
 }
 
-.main h1, .main h2, .main h3, .main section {
+section {
   text-align: center;  
 }
 

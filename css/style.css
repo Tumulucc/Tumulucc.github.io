@@ -228,6 +228,7 @@ h1,h2,h3,section {
 ul {
   text-align: left;
   width:50% ;
+  margin:20px auto;
 }
 
 .cover-img{

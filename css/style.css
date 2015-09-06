@@ -225,7 +225,11 @@ h1,h2,h3,section {
   text-align: center;  
 }
 
-h1 img{
+.cover-img{
+  margin-top: 0;
+}
+
+.cover-img img{
   width: 100%;
   max-width: 900px;
   height: auto;

@@ -227,8 +227,8 @@ h1,h2,h3,section {
 
 section ul {
   text-align: left;
-  width:50% ;
-  min-width:480px;
+  width:100% ;
+  max-width:640px;
   margin:20px auto !important;
 }
 

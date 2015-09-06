@@ -229,7 +229,7 @@ section ul {
   text-align: left;
   width:100% ;
   max-width:480px;
-  margin:20px auto !important;
+  margin:0 auto 20px !important;
 }
 
 .cover-img{
